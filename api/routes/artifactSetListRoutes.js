@@ -11,4 +11,8 @@ module.exports = (app) => {
     .get(artifactSetList.list_a_set)
     .put(artifactSetList.update_a_set)
     .delete(artifactSetList.delete_a_set);
+  app
+    .route('/processSetList')
+    .post(artifactSetList.create_multiple_sets)
+    .delete(artifactSetList.delete_multiple_sets);
 };

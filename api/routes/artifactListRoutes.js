@@ -11,4 +11,8 @@ module.exports = (app) => {
     .get(artifactList.list_an_artifact)
     .put(artifactList.update_an_artifact)
     .delete(artifactList.delete_an_artifact);
+  app
+    .route('/processArtifactList')
+    .post(artifactList.create_multiple_artifacts)
+    .delete(artifactList.delete_multiple_artifacts);
 };

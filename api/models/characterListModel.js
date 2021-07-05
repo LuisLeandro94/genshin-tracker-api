@@ -18,6 +18,10 @@ const CharacterSchema = new Schema({
     type: Number,
     required: 'Enter character rarity',
   },
+  weapon: {
+    type: String,
+    required: 'Enter character weapon type',
+  },
   element: {
     type: String,
     enum: ['Pyro', 'Cryo', 'Hydro', 'Anemo', 'Electro', 'Geo', 'Dendro'],
@@ -49,7 +53,7 @@ const CharacterSchema = new Schema({
           'Inazuma Bakufu',
           'Abyss Order',
           'Adepti',
-          'Adventurer’s Guild',
+          "Adventurers' Guild",
           'Kanjobugyo',
           'Kamisato House',
           'Knights of Favonius',
@@ -90,6 +94,10 @@ const CharacterSchema = new Schema({
   image: {
     type: String,
     required: 'Enter character’s Image URL',
+  },
+  quote: {
+    type: String,
+    required: "Enter character's quote",
   },
   icon: {
     type: String,

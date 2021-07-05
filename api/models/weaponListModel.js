@@ -54,5 +54,9 @@ const WeaponSchema = new Schema({
     type: String,
     default: 'Enter weapon’s location',
   },
+  stats: {
+    type: String,
+    default: null,
+  },
 });
 module.exports = mongoose.model('Weapons', WeaponSchema);

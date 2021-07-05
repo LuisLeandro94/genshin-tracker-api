@@ -11,4 +11,8 @@ module.exports = (app) => {
     .get(characterList.list_a_character)
     .put(characterList.update_a_character)
     .delete(characterList.delete_a_character);
+  app
+    .route('/processCharacterList')
+    .post(characterList.create_multiple_chars)
+    .delete(characterList.delete_multiple_chars);
 };
