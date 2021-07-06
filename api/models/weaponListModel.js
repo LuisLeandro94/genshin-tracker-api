@@ -22,11 +22,11 @@ const WeaponSchema = new Schema({
     type: Number,
     required: 'Enter weapon Base Attack',
   },
-  substatType: {
+  subStatType: {
     type: String,
     required: 'Enter weapon substat type',
   },
-  substat: {
+  subStat: {
     type: Number,
     required: 'Enter weapon substat',
   },

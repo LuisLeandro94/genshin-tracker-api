@@ -12,7 +12,7 @@ module.exports = (app) => {
     .put(weaponList.update_a_weapon)
     .delete(weaponList.delete_a_weapon);
   app
-    .route('/processWeaponList')
+    .route('/processWeaponsList')
     .post(weaponList.create_multiple_weapons)
     .delete(weaponList.delete_multiple_weapons);
 };

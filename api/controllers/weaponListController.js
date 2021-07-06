@@ -24,7 +24,7 @@ exports.create_multiple_weapons = (req, res) => {
       new_weapon.save((err, weapon) => {});
     } catch {}
   });
-  res.json(` ${weapon.createdCount}weapons were created successfuly!`);
+  res.json(`weapons were created successfuly!`);
 };
 
 exports.list_a_weapon = (req, res) => {
@@ -36,7 +36,7 @@ exports.list_a_weapon = (req, res) => {
 
 exports.update_a_weapon = (req, res) => {
   Weapon.findOneAndUpdate(
-    { id: req.params.weaponID },
+    { _id: req.params.weaponID },
     req.body,
     { new: true },
     (err, task) => {
@@ -49,7 +49,7 @@ exports.update_a_weapon = (req, res) => {
 exports.delete_a_weapon = (req, res) => {
   Weapon.deleteOne(
     {
-      id: req.params.weaponID,
+      _id: req.params.weaponID,
     },
     (err, weapon) => {
       if (err) res.send(err);
