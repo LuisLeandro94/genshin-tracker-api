@@ -24,9 +24,7 @@ exports.create_multiple_sets = (req, res) => {
       new_artifactSet.save((err, artifactSet) => {});
     } catch {}
   });
-  res.json(
-    ` ${artifactSet.createdCount}artifactSets were created successfuly!`
-  );
+  res.json(`All artifactSets were created successfuly!`);
 };
 
 exports.list_a_set = (req, res) => {
